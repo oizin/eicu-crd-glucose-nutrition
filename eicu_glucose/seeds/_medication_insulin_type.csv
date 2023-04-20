@@ -1,0 +1,42 @@
+drugname,N,insulin_type,insulin_acting
+novolog,26348,aspart,short
+insulin-lispro (rdna) *unit* inj,15309,lispro,short
+aspart insulin,13466,aspart,short
+3 ml vial : insulin lispro (human) 100 unit/ml sc soln,13029,lispro,short
+insulin lispro,10922,lispro,short
+insulin aspart,9794,aspart,short
+insulin (regular) 100 units in 1,9639,regular,intermediate
+insulin-glargine *unit* inj,8693,glargine,long
+3 ml vial : insulin regular human 100 unit/ml ij soln,8037,regular,intermediate
+insulin aspart 100 unit/ml sc soln,6524,aspart,short
+10 ml vial : insulin regular human 100 unit/ml ij soln,6064,regular,intermediate
+insulin regular human 100 unit/ml ij soln,5805,regular,intermediate
+insulin human regular,5654,regular,intermediate
+10 ml vial : insulin glargine 100 unit/ml sc soln,5292,glargine,long
+insulin lispro 100 units/ml subq soln,5044,lispro,short
+novolog flexpen,4280,aspart,short
+insulin aspart (novolog) inj,3930,aspart,short
+10 ml vial: insulin aspart 100 unit/ml sc soln,3427,aspart,short
+insulin humalog (per unit),3422,lispro,short
+10 ml vial: insulin regular human 100 unit/ml ij soln,3263,regular,intermediate
+insulin reg 100 units/100 ml,3187,regular,intermediate
+10 ml vial: insulin glargine 100 unit/ml sc soln,3029,glargine,long
+insulin lispro (human) 100 unit/ml subcu soln extemp inj,2873,lispro,short
+insulin lispro (human) 100 unit/ml sc soln,2820,lispro,short
+insulin glargine syringe,2749,glargine,long
+10 ml vial : insulin aspart 100 unit/ml sc soln,2731,aspart,short
+insulin regular human 100 unit/ml inj soln,2670,regular,intermediate
+insulin glargine,2640,glargine,long
+insulin detemir,2625,detemir,long
+insulin aspart corrective dosing,2409,aspart,short
+insulin hum-reg (per unit),2165,regular,intermediate
+100 ml bag custom ndc : insulin infusion,1877,NA,NA
+humulin r,1790,regular,intermediate
+insulin regular,1671,regular,intermediate
+insulin lispro (humalog) injection 0-20 units,1621,lispro,short
+"insulin regular, human",1616,regular,intermediate
+"insulin lispro, recombinant",1600,lispro,short
+insulin lantus (per unit),1485,glargine,long
+insulin detemir 100 unit/ml sub-q 10 ml vial,1473,detemir,long
+insulin-regular (human) *unit* inj,1370,regular,intermediate
+humalog,1151,lispro,short

@@ -1,0 +1,306 @@
+celllabel,n,category,group
+% nutrition supplement taken,208,nutrition-other,nutrition-other
+enteral,2454,enteral-nonspecific-intake,nutrition-enteral
+enteral  ,180,enteral-nonspecific-intake,nutrition-enteral
+enteral  feed,160,enteral-nonspecific-intake,nutrition-enteral
+enteral  nepro,955,enteral-product-intake,nutrition-enteral
+enteral  perative,116,enteral-other,nutrition-enteral
+enteral :pivot 1.5,652,enteral-product-intake,nutrition-enteral
+enteral 2 cal,110,enteral-product-intake,nutrition-enteral
+enteral 2 cal hn,4693,enteral-product-intake,nutrition-enteral
+enteral 2 cal hn ,369,enteral-product-intake,nutrition-enteral
+enteral 2 cal/hn ,304,enteral-product-intake,nutrition-enteral
+enteral 2 calhn,512,enteral-product-intake,nutrition-enteral
+enteral 2cal hn,3791,enteral-product-intake,nutrition-enteral
+enteral 2calhn,2391,enteral-product-intake,nutrition-enteral
+enteral af vital,128,enteral-product-intake,nutrition-enteral
+enteral enteral,151,enteral-nonspecific-intake,nutrition-enteral
+enteral enteral meds,381,enteral-water-meds,nutrition-enteral
+enteral feed,1867,enteral-nonspecific-intake,nutrition-enteral
+enteral feeding,303,enteral-nonspecific-intake,nutrition-enteral
+enteral feeds,1074,enteral-nonspecific-intake,nutrition-enteral
+enteral fibersource,4557,enteral-product-intake,nutrition-enteral
+enteral fibersource ,101,enteral-product-intake,nutrition-enteral
+enteral fibersource hl,419,enteral-product-intake,nutrition-enteral
+enteral fibersource hn,2353,enteral-product-intake,nutrition-enteral
+enteral fibersource hn ,105,enteral-product-intake,nutrition-enteral
+enteral fibersource tf,223,enteral-product-intake,nutrition-enteral
+enteral fluids,162,enteral-water-meds,nutrition-enteral
+enteral flush,6707,enteral-water-meds,nutrition-enteral
+enteral flush ,125,enteral-water-meds,nutrition-enteral
+enteral flush with meds,504,enteral-water-meds,nutrition-enteral
+enteral flush/meds,1186,enteral-water-meds,nutrition-enteral
+enteral flushes,879,enteral-water-meds,nutrition-enteral
+enteral flushes and meds,104,enteral-water-meds,nutrition-enteral
+enteral flushes/meds,233,enteral-water-meds,nutrition-enteral
+enteral free h20,546,enteral-water-meds,nutrition-enteral
+enteral free h20 ,219,enteral-water-meds,nutrition-enteral
+enteral free h2o,787,enteral-water-meds,nutrition-enteral
+enteral free water,2432,enteral-water-meds,nutrition-enteral
+enteral free water flush,742,enteral-water-meds,nutrition-enteral
+enteral free water flushes,263,enteral-water-meds,nutrition-enteral
+enteral fwf,544,enteral-water-meds,nutrition-enteral
+enteral glucerna,4474,enteral-product-intake,nutrition-enteral
+enteral glucerna ,177,enteral-product-intake,nutrition-enteral
+enteral glucerna 1.0,335,enteral-product-intake,nutrition-enteral
+enteral glucerna 1.2,1401,enteral-product-intake,nutrition-enteral
+enteral glucerna 1.5,6314,enteral-product-intake,nutrition-enteral
+enteral glucerna 1.5 ,715,enteral-product-intake,nutrition-enteral
+enteral glucerna 1.5 40ml/hour,398,enteral-product-intake,nutrition-enteral
+enteral glucerna 1.5 cal.,138,enteral-product-intake,nutrition-enteral
+enteral glycerna,272,enteral-product-intake,nutrition-enteral
+enteral glycerna 1.5,269,enteral-product-intake,nutrition-enteral
+enteral gt meds,239,enteral-water-meds,nutrition-enteral
+enteral h20 flush,659,enteral-water-meds,nutrition-enteral
+enteral h20 w/ meds,106,enteral-water-meds,nutrition-enteral
+enteral h20 with meds,113,enteral-water-meds,nutrition-enteral
+enteral h2o,295,enteral-water-meds,nutrition-enteral
+enteral h2o flush,547,enteral-water-meds,nutrition-enteral
+enteral h2o flushes,235,enteral-water-meds,nutrition-enteral
+enteral hepament,127,enteral-product-intake,nutrition-enteral
+enteral impact peptide 1.5,606,enteral-product-intake,nutrition-enteral
+enteral isosource,960,enteral-product-intake,nutrition-enteral
+enteral isosource 1.5,101,enteral-product-intake,nutrition-enteral
+enteral isosource hn,216,enteral-product-intake,nutrition-enteral
+enteral isosource tf,131,enteral-product-intake,nutrition-enteral
+enteral jev 1.2,186,enteral-product-intake,nutrition-enteral
+enteral jevity,1047,enteral-product-intake,nutrition-enteral
+enteral jevity 1,493,enteral-product-intake,nutrition-enteral
+enteral jevity 1.0,359,enteral-product-intake,nutrition-enteral
+enteral jevity 1.2,7147,enteral-product-intake,nutrition-enteral
+enteral jevity 1.2 ,500,enteral-product-intake,nutrition-enteral
+enteral jevity 1.2 goal 45ml/hour,277,enteral-product-intake,nutrition-enteral
+enteral jevity 1.2via g-tube,106,enteral-product-intake,nutrition-enteral
+enteral jevity 1.5,3823,enteral-product-intake,nutrition-enteral
+enteral jevity 1.5 ,124,enteral-product-intake,nutrition-enteral
+enteral jevity 1.5 tf,113,enteral-product-intake,nutrition-enteral
+enteral jevity 1cal,274,enteral-product-intake,nutrition-enteral
+enteral jevity1.2,302,enteral-product-intake,nutrition-enteral
+enteral jtube meds & flush ,190,enteral-water-meds,nutrition-enteral
+enteral med flush,206,enteral-water-meds,nutrition-enteral
+enteral med flushes,128,enteral-water-meds,nutrition-enteral
+enteral meds,15973,enteral-water-meds,nutrition-enteral
+enteral meds ,103,enteral-water-meds,nutrition-enteral
+enteral meds flushes,154,enteral-water-meds,nutrition-enteral
+enteral meds h2o flush,199,enteral-water-meds,nutrition-enteral
+enteral meds via ngt,122,enteral-water-meds,nutrition-enteral
+enteral meds/ flush,187,enteral-water-meds,nutrition-enteral
+enteral meds/flush,1741,enteral-water-meds,nutrition-enteral
+enteral meds/flushes,1239,enteral-product-intake,nutrition-enteral
+enteral nepro,25768,enteral-product-intake,nutrition-enteral
+enteral nepro ,587,enteral-product-intake,nutrition-enteral
+enteral nepro goal 40ml/hour,160,enteral-product-intake,nutrition-enteral
+enteral nepro tf,195,enteral-product-intake,nutrition-enteral
+enteral nepro tube feeds,319,enteral-product-intake,nutrition-enteral
+enteral ng flush,178,enteral-water-meds,nutrition-enteral
+enteral ng/gt,2507,enteral-water-meds,nutrition-enteral
+enteral ngt,473,enteral-water-meds,nutrition-enteral
+enteral ngt flush,262,enteral-water-meds,nutrition-enteral
+enteral ngt meds,511,enteral-water-meds,nutrition-enteral
+enteral ngt meds/ flush,146,enteral-water-meds,nutrition-enteral
+enteral ngt meds/flush,115,enteral-water-meds,nutrition-enteral
+enteral ngt nepro,133,enteral-product-intake,nutrition-enteral
+enteral novasource,487,enteral-product-intake,nutrition-enteral
+enteral novasource renal,2339,enteral-product-intake,nutrition-enteral
+enteral novasource renal ,147,enteral-product-intake,nutrition-enteral
+enteral novosource renal ,147,enteral-product-intake,nutrition-enteral
+enteral nutren,1087,enteral-product-intake,nutrition-enteral
+enteral nutren ,177,enteral-product-intake,nutrition-enteral
+enteral nutren 1.5,8962,enteral-product-intake,nutrition-enteral
+enteral nutri-hep,103,enteral-product-intake,nutrition-enteral
+enteral og flush,531,enteral-water-meds,nutrition-enteral
+enteral ogt,356,enteral-water-meds,nutrition-enteral
+enteral ogt flush,2229,enteral-water-meds,nutrition-enteral
+enteral ogt flush/meds,538,enteral-water-meds,nutrition-enteral
+enteral ogt meds,935,enteral-water-meds,nutrition-enteral
+enteral ogt meds/flush,716,enteral-water-meds,nutrition-enteral
+enteral ogt meds/flushes,100,enteral-water-meds,nutrition-enteral
+enteral osmolite,194,enteral-product-intake,nutrition-enteral
+enteral osmolite 1.2,612,enteral-product-intake,nutrition-enteral
+enteral osmolite 1.2 ,137,enteral-product-intake,nutrition-enteral
+enteral osmolite 1.5,2700,enteral-product-intake,nutrition-enteral
+enteral osmolte 1.5,652,enteral-product-intake,nutrition-enteral
+enteral osmolyte,178,enteral-product-intake,nutrition-enteral
+enteral osmolyte ,241,enteral-product-intake,nutrition-enteral
+enteral osmolyte 1.2,472,enteral-product-intake,nutrition-enteral
+enteral osmolyte 1.5,576,enteral-product-intake,nutrition-enteral
+enteral other,3321,enteral-other,nutrition-enteral
+enteral oxepa,626,enteral-product-intake,nutrition-enteral
+enteral oxepa tf,111,enteral-product-intake,nutrition-enteral
+enteral peg flush,421,enteral-water-meds,nutrition-enteral
+enteral peg flush/meds,100,enteral-water-meds,nutrition-enteral
+enteral peg tube,100,enteral-water-meds,nutrition-enteral
+enteral peptamen,1098,enteral-product-intake,nutrition-enteral
+enteral peptamen ,149,enteral-product-intake,nutrition-enteral
+enteral peptamen af,1150,enteral-product-intake,nutrition-enteral
+enteral perative,7876,enteral-product-intake,nutrition-enteral
+enteral perative ,176,enteral-product-intake,nutrition-enteral
+enteral perative 40ml/hour,165,enteral-product-intake,nutrition-enteral
+enteral perative goal 75/hr,226,enteral-product-intake,nutrition-enteral
+enteral perrative,297,enteral-other,nutrition-enteral
+enteral perravtive,156,enteral-other,nutrition-enteral
+enteral pertive,328,enteral-other,nutrition-enteral
+enteral piviot,132,enteral-product-intake,nutrition-enteral
+enteral piviot 1.5,339,enteral-product-intake,nutrition-enteral
+enteral pivit 1.5,132,enteral-product-intake,nutrition-enteral
+enteral pivit 1.5 goal 55ml/hr,221,enteral-product-intake,nutrition-enteral
+enteral pivol 1.5,102,enteral-product-intake,nutrition-enteral
+enteral pivot,3188,enteral-product-intake,nutrition-enteral
+enteral pivot ,173,enteral-product-intake,nutrition-enteral
+enteral pivot  1.5,467,enteral-product-intake,nutrition-enteral
+enteral pivot 1.5,26440,enteral-product-intake,nutrition-enteral
+enteral pivot 1.5 ,377,enteral-product-intake,nutrition-enteral
+enteral pivot 1.5 @ 25ml/hr,142,enteral-product-intake,nutrition-enteral
+enteral pivot 1.5 goal 45,127,enteral-product-intake,nutrition-enteral
+enteral pivot 1.5 goal 45ml/hour,103,enteral-product-intake,nutrition-enteral
+enteral pivot 1.5 goal 65cc/hr,345,enteral-product-intake,nutrition-enteral
+enteral pivot 1.5 per gtube,100,enteral-product-intake,nutrition-enteral
+enteral pivot 1.5 tf,218,enteral-product-intake,nutrition-enteral
+enteral pivot 1.5 via gt,100,enteral-product-intake,nutrition-enteral
+enteral pivot 1.5 via j-tube,129,enteral-product-intake,nutrition-enteral
+enteral pivot 1.5 via og tube,108,enteral-product-intake,nutrition-enteral
+enteral pivot 1.5cal,1622,enteral-product-intake,nutrition-enteral
+enteral pivot goal of 40ml/hr,165,enteral-product-intake,nutrition-enteral
+enteral pivot1.5,954,enteral-product-intake,nutrition-enteral
+enteral promote,1929,enteral-product-intake,nutrition-enteral
+enteral promote w/ fiber,6072,enteral-product-intake,nutrition-enteral
+enteral promote with fiber,956,enteral-product-intake,nutrition-enteral
+enteral protein powder,448,enteral-other,nutrition-enteral
+enteral pulmacare,108,enteral-product-intake,nutrition-enteral
+enteral pulmocare,371,enteral-product-intake,nutrition-enteral
+enteral replete,1888,enteral-product-intake,nutrition-enteral
+enteral replete tf,202,enteral-product-intake,nutrition-enteral
+enteral tf,3074,enteral-nonspecific-intake,nutrition-enteral
+enteral tf flush,287,enteral-water-meds,nutrition-enteral
+enteral tf pivot 1.5 ,190,enteral-product-intake,nutrition-enteral
+enteral tfs,201,enteral-other,nutrition-enteral
+enteral tpn,494,enteral-other,nutrition-enteral
+enteral tube feed,4422,enteral-nonspecific-intake,nutrition-enteral
+enteral tube feed flush,203,enteral-other,nutrition-enteral
+enteral tube feeding,4390,enteral-nonspecific-intake,nutrition-enteral
+enteral tube feeds,3485,enteral-nonspecific-intake,nutrition-enteral
+enteral tube feeds ,257,enteral-nonspecific-intake,nutrition-enteral
+enteral tube feeds - nepro,107,enteral-product-intake,nutrition-enteral
+enteral tube feeds via gt,173,enteral-nonspecific-intake,nutrition-enteral
+enteral tube flush,2938,enteral-water-meds,nutrition-enteral
+enteral tubefeed,926,enteral-nonspecific-intake,nutrition-enteral
+enteral tubefeeding,162,enteral-nonspecific-intake,nutrition-enteral
+enteral two cal hn,1309,enteral-product-intake,nutrition-enteral
+enteral two- cal hn,232,enteral-product-intake,nutrition-enteral
+enteral two cal hn ,103,enteral-product-intake,nutrition-enteral
+enteral two cal hn-goal 35cc/hr,121,enteral-product-intake,nutrition-enteral
+enteral two calhn,163,enteral-product-intake,nutrition-enteral
+enteral two kal hn,121,enteral-product-intake,nutrition-enteral
+enteral twocal,767,enteral-product-intake,nutrition-enteral
+enteral twocal hn,144,enteral-product-intake,nutrition-enteral
+enteral twocalhn,588,enteral-product-intake,nutrition-enteral
+enteral vital,370,enteral-product-intake,nutrition-enteral
+enteral vital 1.2,826,enteral-product-intake,nutrition-enteral
+enteral vital 1.5 goal 56ml,106,enteral-product-intake,nutrition-enteral
+enteral vital af,1723,enteral-product-intake,nutrition-enteral
+enteral vital af 1.2,3606,enteral-product-intake,nutrition-enteral
+enteral vital af 1.2 ,158,enteral-product-intake,nutrition-enteral
+enteral vital af 1.5,185,enteral-product-intake,nutrition-enteral
+enteral vital high protein,734,enteral-product-intake,nutrition-enteral
+enteral vital high protien,529,enteral-product-intake,nutrition-enteral
+enteral vivonex,410,enteral-product-intake,nutrition-enteral
+enteral w/ meds,200,enteral-other,nutrition-enteral
+enteral water,259,enteral-water-meds,nutrition-enteral
+enteral water flush,2478,enteral-water-meds,nutrition-enteral
+enteral water flushes,2053,enteral-water-meds,nutrition-enteral
+enteral water via feeding tube,194,enteral-water-meds,nutrition-enteral
+enteral water w/meds,338,enteral-water-meds,nutrition-enteral
+enteral/gastric tube intake #1,63979,enteral-nonspecific-intake,nutrition-enteral
+enteraltubeflush,2405,enteral-water-meds,nutrition-enteral
+fat emulsion,2249,parenteral-fat,nutrition-parenteral
+fat emulsion 20%,1314,parenteral-fat,nutrition-parenteral
+lipid intake amount,1007,nutrition-fat,nutrition-other
+lipids:,318,nutrition-fat,nutrition-other
+nourish/supplemt,250,nutrition-other,nutrition-other
+nutrition total,80752,nutrition-total,nutrition-other
+oral,32177,oral-intake,nutrition-oral
+oral intake,66357,oral-intake,nutrition-oral
+other intake,1765,nutrition-other,nutrition-other
+p.o.,34704,oral-intake,nutrition-oral
+po -,721,oral-intake,nutrition-oral
+po  ,1434,oral-intake,nutrition-oral
+po  ogt meds,111,oral-intake,nutrition-oral
+po .,242,oral-intake,nutrition-oral
+po :,111,oral-intake,nutrition-oral
+po 1800 ada,117,oral-intake,nutrition-oral
+po ada,199,oral-intake,nutrition-oral
+po ada diet,254,oral-intake,nutrition-oral
+po cardiac,1924,oral-intake,nutrition-oral
+po cardiac diabetic,221,oral-intake,nutrition-oral
+po cardiac diet,1875,oral-intake,nutrition-oral
+po cardiac liquids,202,oral-intake,nutrition-oral
+po cardiac/diabetic diet,142,oral-intake,nutrition-oral
+po cl liq,166,oral-intake,nutrition-oral
+po cl liqs,211,oral-intake,nutrition-oral
+po clear liq,106,oral-intake,nutrition-oral
+po clear liquid,307,oral-intake,nutrition-oral
+po clear liquids,3076,oral-intake,nutrition-oral
+po clear lixs,153,oral-intake,nutrition-oral
+po clears,3240,oral-intake,nutrition-oral
+po diabetic diet,500,oral-intake,nutrition-oral
+po diet,1406,oral-intake,nutrition-oral
+po feeding tube,372,enteral-other,nutrition-enteral
+po fl,128,oral-intake,nutrition-oral
+po fluid,2572,oral-intake,nutrition-oral
+po fluid intake,882,oral-intake,nutrition-oral
+po fluids,37197,oral-intake,nutrition-oral
+po fluids ,455,oral-intake,nutrition-oral
+po flush/ meds,103,oral-intake,nutrition-oral
+po food,110,oral-intake,nutrition-oral
+po free water,249,oral-intake,nutrition-oral
+po glucerna 1.0,123,oral-intake,nutrition-oral
+po ice chips,216,oral-intake,nutrition-oral
+po intake,20125,oral-intake,nutrition-oral
+po intake ,592,oral-intake,nutrition-oral
+po liq,126,oral-intake,nutrition-oral
+po liqs,910,oral-intake,nutrition-oral
+po liquid,740,oral-intake,nutrition-oral
+po liquid intake,156,oral-intake,nutrition-oral
+po liquids,7351,oral-intake,nutrition-oral
+po lix,119,oral-intake,nutrition-oral
+po low na. fluid restrict,114,oral-intake,nutrition-oral
+po meds,1248,oral-intake,nutrition-oral
+po nectar thick,101,oral-intake,nutrition-oral
+po nutren 1.5,210,oral-intake,nutrition-oral
+po ogt,150,oral-intake,nutrition-oral
+po ogt flush,218,oral-intake,nutrition-oral
+po oral,16469,oral-intake,nutrition-oral
+po oral ,216,oral-intake,nutrition-oral
+po oral fluids,179,oral-intake,nutrition-oral
+po oral intake,2087,oral-intake,nutrition-oral
+po po,6453,oral-intake,nutrition-oral
+po po diet,114,oral-intake,nutrition-oral
+po po fluid,405,oral-intake,nutrition-oral
+po po fluids,2552,oral-intake,nutrition-oral
+po po intake,1455,oral-intake,nutrition-oral
+po po liquids,151,oral-intake,nutrition-oral
+po reg,376,oral-intake,nutrition-oral
+po reg diet,279,oral-intake,nutrition-oral
+po reg diet ,130,oral-intake,nutrition-oral
+po reg liqs,112,oral-intake,nutrition-oral
+po regular,1208,oral-intake,nutrition-oral
+po regular diet,1234,oral-intake,nutrition-oral
+po renal,101,oral-intake,nutrition-oral
+po sips,241,oral-intake,nutrition-oral
+po sips of clears,107,oral-intake,nutrition-oral
+po water,437,oral-intake,nutrition-oral
+po:,3892,oral-intake,nutrition-oral
+ppn,947,parenteral-intake,nutrition-parenteral
+ppn/tna/tpn,959,parenteral-intake,nutrition-parenteral
+tpn,27885,parenteral-intake,nutrition-parenteral
+tpn w/fat emulsion,1609,parenteral-intake,nutrition-parenteral
+tpn w/fat emulsion 20%,319,parenteral-intake,nutrition-parenteral
+tpn with h2 blocker,136,parenteral-intake,nutrition-parenteral
+tpn with insulin,177,parenteral-insulin,nutrition-parenteral
+tpn/ppn intake amount,584,parenteral-intake,nutrition-parenteral
+tpn:,333,parenteral-intake,nutrition-parenteral
+tube feeding,13750,enteral-nonspecific-intake,nutrition-enteral
+tube feeding amount,1340,enteral-nonspecific-intake,nutrition-enteral
+tube feeding:,2726,enteral-nonspecific-intake,nutrition-enteral
+volume infused (ml),19650,volume-infused,nutrition-other
+water via tube:,979,enteral-water-meds,nutrition-enteral

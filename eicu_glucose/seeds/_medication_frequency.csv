@@ -1,0 +1,271 @@
+frequency,N,times_per_day,frequency_english
+h1,462,1,once a day
+nightly,5277,1,once a day
+daily,3124,1,once a day
+once x1,2920,1,once
+once,2876,1,once
+q24h,2739,1,once a day
+1xonly,1533,1,once a day
+one,1437,1,once
+onetime,1165,1,once
+qhs (2100),910,1,once a day
+at bedtime,756,1,once a day
+hs,587,1,once a day
+2100,499,1,once a day
+one time x1,497,1,once
+"9,002,100",491,1,once a day
+daily with dinner,459,1,once a day
+every morning before breakfast,437,1,once a day
+daily (0900),245,1,once a day
+q24hr,232,1,once a day
+pyx1time,222,1,once a day
+oncall x1,178,1,once
+daily breakfast,149,1,once a day
+qpm,149,1,once a day
+600,118,1,once a day
+bedtime,107,1,once a day
+onetime 0 sec,105,1,once a day
+daily supper,95,1,once a day
+every 24 hours,93,1,once a day
+one 1,67,1,once
+daily with breakfast,58,1,once a day
+qday,58,1,once a day
+now,47,1,once
+one time one time,44,1,once
+x1,44,1,once
+once as needed x1,41,1,once a day
+qam ac,41,1,once a day
+"qd8,0800 indef",41,1,once a day
+900,32,1,once a day
+daily pm,31,1,once a day
+one time one time stat,30,1,once
+1x,28,1,once a day
+x1ed m14,28,1,once a day
+one time stat,25,1,once
+daily prn,19,1,once a day
+x1 m1019,17,1,once a day
+x1 m419,16,1,once a day
+"qd22,2200 indef",15,1,once a day
+x1 m1139,15,1,once a day
+x1 m359,15,1,once a day
+.stk-med 1,13,1,once a day
+q breakfast,13,1,once a day
+x1 m899,12,1,once a day
+daily (0600),11,1,once a day
+ondem,11,1,once a day
+one time,11,1,once
+x1 m539,10,1,once a day
+x1 m719,10,1,once a day
+x1 m779,9,1,once a day
+x1 m959,9,1,once a day
+qac breakfast,8,1,once a day
+x1 m1079,8,1,once a day
+x1 m839,8,1,once a day
+730,7,1,once a day
+daily (1700),7,1,once a day
+q1700,7,1,once a day
+x1 m659,7,1,once a day
+"once,1000 indef",6,1,once a day
+"once,1200 indef",6,1,once a day
+h24,5,1,once a day
+w brkfst,5,1,once a day
+ac daily breakfast,4,1,once a day
+q evening,4,1,once a day
+q0600,4,1,once a day
+x1 m599,3,1,once a day
+daily early,2,1,once a day
+1700,1,1,once a day
+daily late,1,1,once a day
+dailyb,1,1,once a day
+pacu use only x1,1,1,once a day
+pre-proc once x1,1,1,once a day
+q12h,512,2,twice a day
+bid ac,199,2,twice a day
+q12hr,152,2,twice a day
+2 times daily,125,2,twice a day
+q12h sch,103,2,twice a day
+bidac,60,2,twice a day
+bid wc,52,2,twice a day
+bid m/e,47,2,twice a day
+bidmeal,15,2,twice a day
+q12h (int),15,2,twice a day
+bid m/n,13,2,twice a day
+bidmeals,13,2,twice a day
+bid (09 17),9,2,twice a day
+daily x2,9,2,twice a day
+bid meals,7,2,twice a day
+bid (non-std),6,2,twice a day
+q 12 hour,6,2,twice a day
+12h,5,2,twice a day
+bid (06 18),4,2,twice a day
+bid before meals,4,2,twice a day
+bidwm,4,2,twice a day
+q 12 hour (bid),4,2,twice a day
+bid x2,3,2,twice a day
+bidp,3,2,twice a day
+2xdaily,2,2,twice a day
+bid with meals,2,2,twice a day
+q12,2,2,twice a day
+"8,001,700",1,2,twice a day
+2 times daily with meals,1,2,twice a day
+2 times per day,1,2,twice a day
+bid0600,1,2,twice a day
+with meals,2137,3,three times a day
+ac,1119,3,three times a day
+tid w/meals,825,3,three times a day
+tidmeal,806,3,three times a day
+"tid8,0800,1200,1800 indef",672,3,three times a day
+daily ac,347,3,three times a day
+h8,146,3,three times a day
+tid,140,3,three times a day
+dailyacb,87,3,three times a day
+q8h,61,3,three times a day
+tidp,40,3,three times a day
+q 8 hour,14,3,three times a day
+tid with meals,14,3,three times a day
+q8h sch,12,3,three times a day
+daily pc,9,3,three times a day
+"bid8,0800,1800 indef",8,3,three times a day
+q8hr,7,3,three times a day
+q8,5,3,three times a day
+3 times daily,4,3,three times a day
+3 times daily prn,2,3,three times a day
+every 8 hours,2,3,three times a day
+3xdaily,1,3,three times a day
+tid (09 14 21),1,3,three times a day
+tidprn,1,3,three times a day
+4x daily ac & hs,3881,4,four times a day
+qid ac,2459,4,four times a day
+ac-hs,2276,4,four times a day
+qid meals,1849,4,four times a day
+sliding scale,1302,4,four times a day
+ac+hs,1171,4,four times a day
+ac/hs,1091,4,four times a day
+qid before meals and nightly,1048,4,four times a day
+before meals & nightly,1003,4,four times a day
+"q6h,0000,0600,1200,1800 indef",322,4,four times a day
+q6,227,4,four times a day
+6h,146,4,four times a day
+4x daily,133,4,four times a day
+4 times per day,83,4,four times a day
+qid,63,4,four times a day
+every 6 hours,42,4,four times a day
+every 6 hours scheduled,42,4,four times a day
+4x daily prn,25,4,four times a day
+"qid8,0800,1200,1800,2200 indef",14,4,four times a day
+q6hprn,12,4,four times a day
+4 times daily,8,4,four times a day
+every 6 hours prn,3,4,four times a day
+q6h x4,3,4,four times a day
+qid prn,3,4,four times a day
+q6h (int),1,4,four times a day
+q4h (int),923,6,six times a day
+q4h sch,516,6,six times a day
+q4hrs,29,6,six times a day
+q4h x2,7,6,six times a day
+q4h wa,1,6,six times a day
+rspq4h,1,6,six times a day
+q3h,40,8,eight times a day
+q2h,145,12,twelve times a day
+q2hr,3,12,twelve times a day
+q1hr,2,24,once an hour
+q1h,10,25,once an hour
+qhs,8260,1,once a day
+daily bedtime,3853,1,once a day
+1xdaily hs,1538,1,once a day
+achs,4095,4,four times a day
+continuous,8953,NA,continuous
+titrate,1105,NA,continuous
+continuous tpn,837,NA,continuous
+drip,536,,continuous
+continuous indef,480,,continuous
+otcond,466,,continuous
+titrated,298,,continuous
+tpn continuous,106,,continuous
+tpn2100,37,,continuous
+infuse,31,,continuous
+tpn1800,30,,continuous
+continuous prn,19,NA,continuous
+continuos,7,,continuous
+cont,1,NA,continuous
+titrated/see admin instructions,417,,continuous
+q4h,6117,6,every four hours
+q 4 hour,2990,4,every four hours
+q4hr,1483,6,every four hours
+qam,2393,1,every morning
+q6h,4215,4,every six hours
+q6h sch,3290,4,every six hours
+q 6 hour,2392,4,every six hours
+q6hr,1904,4,every six hours
+qidachs,8051,4,four times a day
+,30310,NA,NA
+pyxis,13466,NA,NA
+per protocol,5876,NA,NA
+zpyxisvend,460,NA,NA
+oncerx,113,NA,NA
+udp,23,NA,NA
+0,1,NA,NA
+preop,1,NA,NA
+correctional dosing,1975,NA,once
+see admin notes,586,NA,NA
+stat,59,NA,NA
+oto,27,NA,NA
+ud,10,NA,NA
+as directed,3,NA,NA
+see admin instructions,2,NA,NA
+once prn,2683,NA,once
+prn6 indef,847,NA,PRN
+prntid indef,792,NA,PRN
+prnhs indef,708,,PRN
+nightly prn,341,1,PRN
+hs prn,327,1,PRN
+q6h prn,122,4,PRN
+tid prn,116,3,PRN
+qhs prn,110,1,PRN
+q4h prn,103,6,PRN
+q1hprn,64,24,PRN
+oncall,38,,PRN
+prnp,32,,PRN
+q6hrsprn,24,4,PRN
+as-dir,16,,PRN
+q1h prn,12,24,PRN
+prnbid indef,10,2,PRN
+prn4 indef,8,4,PRN
+bid prn,5,2,PRN
+prnqd indef,5,1,PRN
+q 4 hour prn,5,6,PRN
+q8h prn,5,3,PRN
+once prn x1,4,1,PRN
+q2h prn,3,12,PRN
+q4hprn,3,6,PRN
+as needed,2,,PRN
+onetimeprn,2,1,PRN
+prn x999,2,NA,PRN
+q4hrsprn,2,6,PRN
+qhsprn,2,1,PRN
+user specified,2,,PRN
+bidprn,1,2,PRN
+dailyprn,1,1,PRN
+on call to procedure,1,NA,PRN
+once as needed,1,1,PRN
+prn indef,1,NA,PRN
+prn x1,1,1,PRN
+prn8 indef,1,3,PRN
+q24h sch,1,1,PRN
+q3h prn,1,8,PRN
+q72h,1,NA,PRN
+see admin instructions prn,1,NA,PRN
+protocol,105,,protocol
+tid pc,2268,3,three times a day
+tid ac,9173,3,three times a day
+tid meals,5968,3,three times a day
+tid wc,5289,3,three times a day
+tidac,2439,3,three times a day
+3xdaily ac,2424,3,three times a day
+tid15ac,1888,3,three times a day
+bid,1906,2,twice a day
+prn,2345,,PRN
+.stk-med,434,,
+to or,311,,
+ot,117,,
+amac,102,,

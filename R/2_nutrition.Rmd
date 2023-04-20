@@ -1,0 +1,338 @@
+---
+title: "Nutrition"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Import packages and data
+
+```{r message=FALSE, warning=FALSE}
+library(data.table)
+library(ggplot2)
+
+icustay <- fread("../data/raw/icustay.csv")
+enteral <- fread("../data/raw/enteral.csv")
+parenteral <- fread("../data/raw/parenteral.csv")
+oral <- fread("../data/raw/oral_intake.csv")
+nursecare <- fread("../data/raw/nursecare_nutrition.csv")
+
+enteral[,time_gap := time - shift(time,1),by=patientunitstayid]
+enteral[,enteral_rate := enteral_total / time_gap * 60]
+enteral[enteral_rate > 100, enteral_rate := NA]
+
+nursecare[,enteral := fifelse(cellattributevalue %in% c("enteral","enteral and IV"),1,0)]
+nursecare[,parenteral := fifelse(cellattributevalue %in% c("PPN","TPN"),1,0)]
+
+icustay[,oral := fifelse(patientunitstayid %in% oral[time > 0,patientunitstayid],1,0)]
+icustay[,enteral := fifelse(patientunitstayid %in% c(enteral[time > 0,patientunitstayid],
+                                                     nursecare[enteral == 1,patientunitstayid]),1,0)]
+icustay[,parenteral := fifelse(patientunitstayid %in% c(parenteral[time > 0,patientunitstayid],
+                                                      nursecare[enteral == 1,patientunitstayid]),1,0)]
+icustay[,any_nutrition := fifelse(oral > 0 | enteral > 0 | parenteral > 0 |
+                                    patientunitstayid %in% nursecare$patientunitstayid,1,0)]
+```
+
+# Hospitals without information
+
+Record rates:
+
+```{r}
+nut_pts <- unique(c(enteral$patientunitstayid[enteral$source_treatment == 0],
+                    parenteral$patientunitstayid[parenteral$source_treatment == 0],
+                    oral$patientunitstayid))
+icustay[,nut_info := fifelse(patientunitstayid %in% nut_pts,1,0)]
+tab <- icustay[,.N,by=.(nut_info,hospitalid)]
+tab[,Nh := sum(N),by=hospitalid]
+print("hospitals recording no nutritional info:")
+tab[N == Nh][,.N]
+print("ICU stays in recording no nutritional info:")
+icustay[hospitalid %in% tab[N == Nh]$hospitalid,.N]
+excl_hosps1 <- tab[N == Nh]$hospitalid
+```
+
+Record presence:
+
+```{r}
+nut_pts <- unique(c(enteral$patientunitstayid,
+                    parenteral$patientunitstayid,
+                    oral$patientunitstayid,
+                    nursecare$patientunitstayid))
+icustay[,nut_info := fifelse(patientunitstayid %in% nut_pts,1,0)]
+tab <- icustay[,.N,by=.(nut_info,hospitalid)]
+tab[,Nh := sum(N),by=hospitalid]
+print("hospitals recording no nutritional info:")
+tab[N == Nh][,.N]
+print("ICU stays in recording no nutritional info:")
+icustay[hospitalid %in% tab[N == Nh]$hospitalid,.N]
+excl_hosps <- tab[N == Nh]$hospitalid
+```
+
+# Overview of source tables
+
+```{r}
+parenteral[,.N,by=.(source_intakeoutput,source_treatment,
+                    source_infusiondrug,source_medication)][order(-N)]
+```
+
+Source is treatment
+
+```{r}
+parenteral[source_treatment == 1,.N]
+length(parenteral[source_treatment == 1,unique(patientunitstayid)])
+```
+
+```{r}
+oral[,.N,by=.(source_intakeoutput)][order(-N)]
+```
+
+```{r}
+enteral[,.N,by=.(source_intakeoutput,source_treatment,source_infusiondrug)]
+```
+
+Source is treatment
+
+```{r}
+enteral[source_treatment == 1,.N]
+length(enteral[source_treatment == 1,unique(patientunitstayid)])
+```
+
+# ICU stays
+
+```{r}
+# ICU stays
+icustay[oral == 1,.N]
+icustay[oral==1,.N,by=hosp_mort]
+```
+
+```{r}
+icustay[enteral == 1,.N]
+icustay[enteral==1,.N,by=hosp_mort]
+```
+
+```{r}
+icustay[parenteral == 1,.N]
+icustay[parenteral==1,.N,by=hosp_mort]
+```
+
+# NurseCare
+
+```{r}
+length(nursecare[enteral == 1,unique(patientunitstayid)])
+```
+
+```{r}
+length(nursecare[parenteral == 1,unique(patientunitstayid)])
+```
+
+# Enteral nutrition
+
+```{r}
+enteral <- enteral[!(is.na(enteral_total))]
+enteral[,time_gap := time - shift(time,1),by=patientunitstayid]
+enteral[enteral_total > 100,enteral_total := enteral_total/time_gap*60]
+enteral[enteral_total > 200,enteral_total := NA]
+quantile(enteral$enteral_total,probs=seq(0.9,1.0,0.001),na.rm=TRUE)
+enteral[,g100:= fifelse(enteral_total > 100,1,0)]
+enteral[,dy := floor(time / 60 / 24)]
+```
+
+## Descriptive statistics
+
+```{r}
+
+# enteral description
+# time to...
+time_to_enteral <- enteral[time > -24,.(enteral_start = min(time/60)),
+                                        by=patientunitstayid]
+time_to_enteral = merge(time_to_enteral,icustay[,.(patientunitstayid,hosp_mort)],by="patientunitstayid")
+summary(time_to_enteral$enteral_start)
+```
+
+Rate of enteral product
+
+```{r}
+# rate
+enteral[enteral_total > 0,summary(enteral_total / time_gap * 60)]
+summary(enteral[enteral_total > 0 & time > 0,enteral_total])
+```
+
+Total enteral per day
+
+```{r}
+total_feeding <- enteral[enteral_total> 0 & time > 0,.(total=sum(enteral_total*time_gap / 60,na.rm=TRUE)),by=.(patientunitstayid,dy)]
+total_feeding[,summary(total)]
+```
+
+Total enteral calories per day
+
+```{r}
+total_feeding[,cal_lower := total*1.5]
+total_feeding[,cal_upper := total*2.0]
+total_feeding[total > 0,sum(cal_lower < 2000)/.N]
+total_feeding[total > 0,sum(cal_lower < 1500)/.N]
+total_feeding[total > 0,sum(cal_upper < 2000)/.N]
+total_feeding[total > 0,sum(cal_upper < 1500)/.N]
+```
+
+## Graphs
+
+```{r}
+total_feeding <- enteral[enteral_total> 0 & time > 0,.(total=sum(enteral_total*time_gap / 60,na.rm=TRUE)),by=.(patientunitstayid,dy)]
+total_feeding1 <- total_feeding[,.(total=mean(total)),by=patientunitstayid]
+total_feeding1 <- merge(total_feeding1,icustay[,.(patientunitstayid,hosp_mort)],by="patientunitstayid")
+```
+
+```{r}
+icustay[,los_dy := floor(icu_los_hours/24)]
+tab <- icustay[!hospitalid %in% excl_hosps1,.(Oral = sum(oral),
+           Enteral=sum(enteral),
+           Parenteral=sum(parenteral),
+           `Any nutrition` = sum(any_nutrition),.N),
+        by=los_dy]
+tab[order(los_dy)]
+tab <- melt(tab,measure.vars = 2:5)
+tab[,p := value/N]
+p0 <- ggplot(tab[los_dy > 0 & los_dy < 15]) +
+  geom_bar(aes(x=los_dy,y=p*100,fill=variable),
+           stat="identity",position="dodge") +
+  coord_cartesian(ylim=c(0,80)) +
+  scale_x_continuous(breaks = seq(0,14,by=2)) +
+  labs(x="Length of ICU stay (days)",y="Intake via route (%)") +
+  theme_bw(base_size=14) +
+  scale_fill_brewer(type = "qual",name="",palette = 3)
+p0
+# samples trajectory plots
+set.seed(1)
+samp_ids <- sample(enteral$patientunitstayid,10)
+enteral[,time_dy := time/(60*24)]
+enteral[,time_dy_next := shift(time_dy,-1),by=patientunitstayid]
+enteral_samp <- enteral[patientunitstayid %in% samp_ids & 
+                          !is.na(enteral_total)]
+enteral_samp[,id := paste0("ICU stay - ",LETTERS[as.numeric(factor(patientunitstayid))])]
+p1 <- ggplot(enteral_samp,
+       aes(x=time_dy,y=enteral_rate,group = id)) +
+  geom_rect(aes(xmin = time_dy, xmax = time_dy_next, 
+                ymin = 0, ymax = enteral_rate), alpha = 0.7,
+            fill="lightblue") +
+  geom_step() +
+  scale_y_continuous(n.breaks = 3) +
+  labs(x="Time since ICU admission (days)",y="Feeding rate (mL/hour)") +
+  coord_cartesian(ylim=c(0,120),xlim=c(0,5)) +
+  facet_wrap(~id,ncol=2,scales="free_x") +
+  theme_bw(base_size = 14)
+p1
+ggsave("../graphs/enteral_trajectory_samples.png",plot = p1,height = 12)
+# time to enteral
+p2 <- ggplot(time_to_enteral,aes(x = enteral_start)) +
+  geom_histogram(binwidth=0.5,col="white",fill="lightblue") +
+  labs(x = "Time since ICU admission (days)",y = "Count") +
+  scale_x_continuous(breaks=seq(0,10,by=2)) +
+  coord_cartesian(xlim=c(0,10)) +
+  theme_bw(base_size=14)
+p2
+ggsave("../graphs/time_to_enteral.png",plot=p2)
+# feeding rate
+p3 <- ggplot(enteral,aes(x = enteral_total)) +
+  geom_histogram(col="white",fill="lightblue",bins=20) +
+  labs(x = "Feeding rates (mL/hr)",y = "Count") +
+  coord_cartesian(xlim=c(0,120)) +
+  theme_bw(base_size=14)
+ggsave("../graphs/enteral_feeding_rate.png",plot=p3)
+# total feeding
+total_feeding <- enteral[enteral_total> 0 & time > 0,.(total=sum(enteral_total*time_gap / 60,na.rm=TRUE)),by=.(patientunitstayid,dy)]
+p4 <- ggplot(total_feeding[total != 0],aes(x = total)) +
+  geom_histogram(col="white",fill="lightblue",binwidth=200) +
+  labs(x = "Feeding total (mL/day)",y = "Count") +
+  coord_cartesian(xlim=c(0,2500)) +
+  theme_bw(base_size=14)
+p4
+ggsave("../graphs/enteral_total_day.png",plot=p4)
+apache_tab <- icustay[!hospitalid %in% excl_hosps,.(Nt=.N),by=.(apache_iv)]
+nutrition_apache_iv <- rbind(icustay[enteral==1,.N,by=.(apache_iv)][,.(apache_iv,N,group="Enteral")],
+                             icustay[oral==1,.N,by=.(apache_iv)][,.(apache_iv,N,group="Oral")],
+                             icustay[parenteral==1,.N,by=.(apache_iv)][,.(apache_iv,N,group="Parenteral")])
+nutrition_apache_iv <- merge(nutrition_apache_iv,apache_tab,by="apache_iv")
+nutrition_apache_iv[,p := N/Nt]
+p5 <- ggplot(nutrition_apache_iv,aes(x=apache_iv,y=100*p)) +
+  geom_point(aes(size=N)) +
+  facet_wrap(~group,scale="free_y",nrow=1) +
+  theme_bw(base_size=14) +
+  labs(x="APACHE IV score",y="Intake via route (%)") +
+  theme(legend.position = "none")
+p5
+ggsave("../graphs/nutrition_by_apache.png",p5)
+time_to_enteral[,time_to_enteral_grp := cut(enteral_start,breaks=c(0,12,36,60,Inf),
+                                            ordered=TRUE)]
+tab <- time_to_enteral[!is.na(time_to_enteral_grp),
+                       .(hosp_mort = mean(hosp_mort,na.rm=TRUE),.N),by=time_to_enteral_grp]
+tab[,se := sqrt(hosp_mort*(1-hosp_mort)/N)]
+levels(tab$time_to_enteral_grp) <- stringr::str_replace(levels(tab$time_to_enteral_grp),",","-")
+levels(tab$time_to_enteral_grp) <- stringr::str_replace(levels(tab$time_to_enteral_grp),"\\(","")
+levels(tab$time_to_enteral_grp) <- stringr::str_replace(levels(tab$time_to_enteral_grp),"\\]","")
+levels(tab$time_to_enteral_grp) <- stringr::str_replace(levels(tab$time_to_enteral_grp),"-Inf","+")
+p6 <- ggplot(tab,aes(x=time_to_enteral_grp,y=100*hosp_mort)) +
+  geom_pointrange(aes(ymin=100*(hosp_mort-2*se),ymax=100*(hosp_mort+2*se))) +
+  labs(x="Time since ICU admission (hours)",
+       y="Hospital mortality (%)") +
+  theme_bw(base_size=14)
+total_feeding1[,total_grp := cut(total,breaks=c(0,500,750,1000,Inf),
+                                            ordered=TRUE)]
+tab <- total_feeding1[!is.na(total_grp),
+                       .(hosp_mort = mean(hosp_mort,na.rm=TRUE),.N),by=total_grp]
+tab[,se := sqrt(hosp_mort*(1-hosp_mort)/N)]
+levels(tab$total_grp) <- stringr::str_replace(levels(tab$total_grp),",","-")
+levels(tab$total_grp) <- stringr::str_replace(levels(tab$total_grp),"\\(","")
+levels(tab$total_grp) <- stringr::str_replace(levels(tab$total_grp),"\\]","")
+levels(tab$total_grp) <- stringr::str_replace(levels(tab$total_grp),"-Inf","+")
+levels(tab$total_grp) <- stringr::str_replace(levels(tab$total_grp),"1e\\+03","1,000")
+p7 <- ggplot(tab,aes(x=total_grp,y=hosp_mort)) +
+  geom_pointrange(aes(ymin=hosp_mort-2*se,ymax=hosp_mort+2*se))+
+  labs(x="Enteral volume (mL)",
+       y="Hospital mortality (%)") +
+  theme_bw(base_size=14)
+
+
+gridExtra::grid.arrange(p0,p5,p1,p2,p3,p4,p6,p7,
+                        layout_matrix=matrix(c(1,1,2,2,3,4,3,5,3,6,7,8),
+                                             ncol=2,byrow=TRUE))
+p_all <- gridExtra::arrangeGrob(p0+labs(title="(A)"),
+                                p5+labs(title="(B)"),
+                                p1+labs(title="(C)"),
+                                p2+labs(title="(D)"),
+                                p3+labs(title="(E)"),
+                                p4+labs(title="(F)"),
+                                p6+labs(title="(G)"),
+                                p7+labs(title="(H)"),
+                                layout_matrix=matrix(c(1,1,2,2,3,4,3,5,3,6,7,8),
+                                                     ncol=2,byrow=TRUE))
+ggsave("../graphs/enteral.png",plot=p_all,height = 12,width = 9)
+```
+
+```{r}
+# nutrition by hosp
+hosp_tab <- icustay[,.(Nt=.N),by=.(hospitalid)]
+nutrition_hosp <- rbind(icustay[,.(p = mean(enteral),.N,group="Enteral"),by=hospitalid],
+                        icustay[,.(p = mean(oral),.N,group="Oral"),by=hospitalid],
+                        icustay[,.(p = mean(parenteral),.N,group="Parenteral"),by=hospitalid],
+                        icustay[,.(p = mean(any_nutrition),.N,group="Any nutrition"),by=hospitalid])
+nutrition_hosp <- merge(nutrition_hosp,hosp_tab,all.x=TRUE,by="hospitalid")
+p2 <- ggplot(nutrition_hosp,aes(x=Nt,y=p*100,col=p==0.0)) +
+  geom_point() +
+  facet_wrap(~group,scale="free_y",nrow=2) +
+  geom_hline(data=nutrition_hosp[!hospitalid %in% excl_hosps,
+                                 (mean(p*100)),by=group],aes(yintercept = V1), color="blue") +
+  theme_bw(base_size=14) +
+  scale_x_continuous(n.breaks = 4) +
+  labs(x="Number of ICU stays",y="Intake via route (%)") +
+  scale_color_manual(values=c("black","tomato")) +
+  theme(legend.position = "none")
+p2
+ggsave("graphs/nutrition_by_hosp.png",p2)
+```
+
+
+
+

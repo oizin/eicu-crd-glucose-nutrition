@@ -1,0 +1,23 @@
+
+name: 'eicu_glucose'
+version: '1.0.0'
+config-version: 2
+profile: 'eicu_glucose'
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+target-path: "target"  
+clean-targets:        
+  - "target"
+  - "dbt_packages"
+# In this example config, we tell dbt to build all models in the example/
+# directory as views. These settings can be overridden in the individual model
+# files using the `{{ config(...) }}` macro.
+models:
+  eicu_glucose:
+    materialized: table
+    staging:
+      +materialized: view

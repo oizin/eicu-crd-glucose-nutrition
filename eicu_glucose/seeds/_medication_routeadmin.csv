@@ -1,0 +1,44 @@
+routeadmin,N,route
+.route,344,other
+central iv,60,iv
+central line,17,iv
+cosig iv,2500,iv
+device,39,iv
+im,5,iv
+inj,5,iv
+intraven,835,iv
+intravenou,721,iv
+intravenous,3554,iv
+ip,14,iv
+irr,239,iv
+iv,16498,iv
+iv - continuous infusion (injection),21,iv
+iv (injection),9,iv
+iv cont,70,iv
+iv push,881,iv
+iv sedation,1,iv
+ivdrip,50,iv
+ivp,6,iv
+ivpb,6512,iv
+kidsubq,3,iv
+misc,13467,sc
+oral,1,other
+periph iv,20,iv
+po,3,other
+right eye,1,other
+sc,44905,sc
+see instruct,1,other
+sl,3,iv
+sq,779,sc
+subcut,33367,sc
+subcutan,21199,sc
+subcutaneous,19043,sc
+subcutaneous (injection),3,sc
+subcutaneous (subcutane),84,sc
+subq,45556,sc
+sub-q,1626,sc
+svn,2,iv
+vag,1,other
+xx,586,other
+zpyxvend,460,other
+zz,3,other
